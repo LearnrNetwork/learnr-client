@@ -4,7 +4,9 @@ import UserLayout from '@/components/layouts/UserLayout';
 export default function SignupPage() {
 	return (
 		<UserLayout>
-			<SignupForm />
+			<div className='w-full'>
+				<SignupForm />
+			</div>
 		</UserLayout>
 	);
 }

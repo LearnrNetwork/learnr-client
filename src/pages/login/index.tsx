@@ -15,7 +15,7 @@ export default function LoginPage() {
 
 	return (
 		<UserLayout>
-			<div>
+			<div className='w-full'>
 				<LoginForm />
 			</div>
 		</UserLayout>
