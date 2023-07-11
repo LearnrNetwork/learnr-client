@@ -9,7 +9,7 @@ export default function UserLayout({
 		<main className='flex flex-col justify-center w-full'>
 			<Navbar />
 			<div>
-				<div className='w-full'>{children}</div>
+				<div className='flex flex-col items-center w-full'>{children}</div>
 			</div>
 		</main>
 	);
