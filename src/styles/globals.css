@@ -5,3 +5,33 @@
 #__next {
   @apply w-full h-full;
 }
+
+#book-content {
+  @apply leading-8;
+}
+
+#book-content > a {
+  color: #1a202c;
+  text-decoration: underline;
+  @apply font-semibold text-indigo-500;
+}
+
+#book-content > h3 {
+  @apply pt-8 pb-4 text-2xl font-semibold;
+}
+
+#book-content > h4 {
+  @apply pt-6 pb-2 text-xl font-semibold;
+}
+
+#book-content > blockquote {
+  @apply p-8 my-4 italic bg-gray-100 border-l-[6px] border-gray-300;
+}
+
+#book-content > strong {
+  @apply font-semibold underline;
+}
+
+em > a {
+  @apply font-semibold text-indigo-500;
+}
