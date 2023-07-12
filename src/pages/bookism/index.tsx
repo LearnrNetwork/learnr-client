@@ -10,10 +10,7 @@ const books = [
 		author: 'David Thomas, Andrew Hunt',
 		cover:
 			'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B01MYMUGQL&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL800_&tag=allencheng-20',
-		tags: [
-			{ _id: '1', name: 'Programming' },
-			{ _id: '2', name: 'Software Engineering' },
-		],
+		tags: [{ _id: '1', name: 'Programming' }],
 		href: '/bookism/the-pragmatic-programmer',
 	},
 	{
@@ -23,10 +20,7 @@ const books = [
 		href: '/bookism/the-48-laws-of-power',
 		cover:
 			'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B01MYMUGQL&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL800_&tag=allencheng-20',
-		tags: [
-			{ _id: '1', name: 'Programming' },
-			{ _id: '2', name: 'Software Engineering' },
-		],
+		tags: [{ _id: '1', name: 'Programming' }],
 	},
 	{
 		_id: '3',
@@ -35,10 +29,7 @@ const books = [
 		href: '/bookism/the-pragmatic-programmer',
 		cover:
 			'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B079WM7KLS&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL800_&tag=allencheng-20',
-		tags: [
-			{ _id: '1', name: 'Programming' },
-			{ _id: '2', name: 'Software Engineering' },
-		],
+		tags: [{ _id: '1', name: 'Programming' }],
 	},
 	{
 		_id: '4',
@@ -47,10 +38,7 @@ const books = [
 		href: '/bookism/the-pragmatic-programmer',
 		cover:
 			'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B01MYMUGQL&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL800_&tag=allencheng-20',
-		tags: [
-			{ _id: '1', name: 'Programming' },
-			{ _id: '2', name: 'Software Engineering' },
-		],
+		tags: [{ _id: '1', name: 'Programming' }],
 	},
 	{
 		_id: '5',
@@ -59,10 +47,7 @@ const books = [
 		href: '/bookism/the-pragmatic-programmer',
 		cover:
 			'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B01MYMUGQL&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL800_&tag=allencheng-20',
-		tags: [
-			{ _id: '1', name: 'Programming' },
-			{ _id: '2', name: 'Software Engineering' },
-		],
+		tags: [{ _id: '1', name: 'Programming' }],
 	},
 	{
 		_id: '6',
@@ -71,10 +56,7 @@ const books = [
 		href: '/bookism/the-pragmatic-programmer',
 		cover:
 			'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B01MYMUGQL&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL800_&tag=allencheng-20',
-		tags: [
-			{ _id: '1', name: 'Programming' },
-			{ _id: '2', name: 'Software Engineering' },
-		],
+		tags: [{ _id: '1', name: 'Programming' }],
 	},
 	{
 		_id: '7',
@@ -83,10 +65,7 @@ const books = [
 		href: '/bookism/the-pragmatic-programmer',
 		cover:
 			'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B01MYMUGQL&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL800_&tag=allencheng-20',
-		tags: [
-			{ _id: '1', name: 'Programming' },
-			{ _id: '2', name: 'Software Engineering' },
-		],
+		tags: [{ _id: '1', name: 'Programming' }],
 	},
 	{
 		_id: '8',
@@ -95,10 +74,7 @@ const books = [
 		href: '/bookism/the-pragmatic-programmer',
 		cover:
 			'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B01MYMUGQL&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL800_&tag=allencheng-20',
-		tags: [
-			{ _id: '1', name: 'Programming' },
-			{ _id: '2', name: 'Software Engineering' },
-		],
+		tags: [{ _id: '1', name: 'Programming' }],
 	},
 ];
 

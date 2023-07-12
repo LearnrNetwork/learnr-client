@@ -1,9 +1,11 @@
+import BookmarkButton from '@/components/reactions/Bookmark';
 import UserLayout from '@/components/layouts/UserLayout';
-import Badge from '@/components/badge/Badge';
-import Avatar from '@/components/user/Avatar';
-import Image from 'next/image';
-import Link from 'next/link';
+import LikeButton from '@/components/reactions/Like';
+import ShareButton from '@/components/reactions/Share';
+import ListButton from '@/components/reactions/List';
+import Timeline from '@/components/timeline/Timeline';
 import { useRouter } from 'next/router';
+import { ListBulletIcon } from '@heroicons/react/20/solid';
 
 const contents = [
 	{
@@ -437,90 +439,54 @@ const contents = [
 	},
 ];
 
-export default function BookPage() {
+export default function ChapterPage() {
 	const router = useRouter();
-
 	return (
 		<UserLayout>
-			<div className='flex w-4/5 mt-8'>
-				{/* Book info */}
-				<div className='sticky flex flex-col items-center self-start w-1/3 p-8 mr-8 bg-white rounded-lg top-8'>
-					{/* Book cover */}
-					<div className='w-1/2 overflow-hidden rounded-lg'>
-						<Image
-							src='https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B00J6YBOFQ&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL800_&tag=allencheng-20'
-							alt='book cover'
-							width={500}
-							height={500}
-							className='object-contain'
-						/>
+			<div className='relative flex flex-col items-center justify-center w-full text-justify'>
+				<div className='flex flex-col items-center w-3/5 mt-8'>
+					{/* Timeline */}
+					<div className='sticky self-start hidden w-1/3 mr-6 text-left top-4'>
+						<Timeline titles={contents.map((content) => content.title)} />
 					</div>
-					{/* Book title */}
-					<div className='mt-4 text-2xl font-bold'>
-						The Pragmatic Programmer
-					</div>
-					{/* Book author */}
-					<div className='mt-2 text-lg text-gray-500'>
-						By David Thomas, Andrew Hunt
-					</div>
-					{/* Book tags */}
-					<div className='flex flex-wrap mt-4'>
-						<Badge content='Programming' className='mr-2 uppercase' />
-						<Badge content='Software Engineering' className='mr-2 uppercase' />
-					</div>
-					{/* curated by */}
-					<div className='w-full mt-6'>
-						<p>Curated By</p>
-						<div className='flex items-center justify-between mt-1 text-gray-600'>
-							<div className='flex items-center'>
-								<Avatar
-									src='https://eyemartnepal.com/wp-content/uploads/2019/05/Screenshot_20200303-215853__01.jpg'
-									className='mr-2'
-								/>
-								<p>@beyond</p>
-							</div>
-							<button className='block px-2 py-1 text-sm text-white rounded-lg bg-primary'>
-								Follow
-							</button>
+					<div className='self-center p-8 text-xl tracking-wide bg-white rounded-lg'>
+						<div className='my-8'>
+							<h1 className='text-3xl font-semibold tracking-wide text-center'>
+								{contents[0].title}
+							</h1>
 						</div>
+						<p
+							id='book-content'
+							dangerouslySetInnerHTML={{
+								__html: contents[0].text
+									.replaceAll(
+										'www.shortform.com/app/book',
+										'localhost:3000/bookism'
+									)
+									.replaceAll('Shortform note', 'NOTE')
+									.replaceAll('Shortform ', ''),
+							}}
+						></p>
 					</div>
-					{/* Start Learning */}
-					<div className='w-full mt-6'>
-						<Link
-							href={'/bookism/asdf/asdf'}
-							className='flex justify-center px-4 py-2 text-gray-100 rounded-lg hover:text-white bg-primary hover:bg-blue-600'
-						>
-							Start learning
-						</Link>
-					</div>
-				</div>
-
-				{/* Course Preview */}
-				<div className='flex flex-col w-2/3'>
-					{/* loop over the contents */}
-					{contents.map((content, index) => (
-						<div
-							key={content.title}
-							className='flex items-center justify-between px-4 py-6 mb-4 bg-white rounded-lg'
-						>
-							{/* chapter title */}
-							<Link href={`${router.asPath}/chapter-1`}>
-								<h2 className='ml-3 text-xl tracking-wide'>
-									{index + 1}. {content.title}
-								</h2>
-							</Link>
-							{/* hole for the check box */}
-							<div className='flex items-center justify-center'>
-								<input
-									id='green-checkbox'
-									type='checkbox'
-									className='w-10 h-10 accent-green-600'
-								/>
-							</div>
-						</div>
-					))}
 				</div>
 			</div>
+			{/* the like part */}
+			<div className='sticky flex items-center justify-center p-2 bg-gray-200 rounded-full opacity-95 bottom-8'>
+				<div className='flex items-center justify-center px-2 border-r border-gray-700 border-dashed'>
+					<LikeButton isLiked={true} />
+				</div>
+				<div className='flex items-center justify-center px-2 border-r border-gray-700 border-dashed'>
+					<BookmarkButton isBookmarked={true} />
+				</div>
+				<div className='flex items-center justify-center px-2 border-r border-gray-700 border-dashed'>
+					<ListButton />
+				</div>
+				<div className='flex items-center justify-center px-2'>
+					<ShareButton />
+				</div>
+			</div>
+
+			{/* display each paragraph one by one. */}
 		</UserLayout>
 	);
 }
