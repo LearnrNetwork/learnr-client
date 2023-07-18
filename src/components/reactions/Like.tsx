@@ -11,11 +11,11 @@ export default function LikeButton({
 }) {
 	const [liked, setLiked] = useState(isLiked);
 	return (
-		<button onClick={onClick ? onClick : () => setLiked(!liked)}>
+		<button title='Like' onClick={onClick ? onClick : () => setLiked(!liked)}>
 			<HeartIcon
 				className={classNames(
 					liked ? 'fill-red-600 text-red-600' : 'text-gray-700',
-					'w-8 h-8'
+					'w-7 h-7'
 				)}
 			/>
 		</button>

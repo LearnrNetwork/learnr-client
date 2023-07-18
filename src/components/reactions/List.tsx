@@ -3,6 +3,7 @@ import { ListBulletIcon } from '@heroicons/react/24/outline';
 export default function ShareButton({ onClick }: { onClick?: () => void }) {
 	return (
 		<button
+			title='Chapters'
 			onClick={
 				onClick
 					? onClick
@@ -11,7 +12,7 @@ export default function ShareButton({ onClick }: { onClick?: () => void }) {
 					  }
 			}
 		>
-			<ListBulletIcon className='w-8 h-8 text-gray-700' />
+			<ListBulletIcon className='text-gray-700 w-7 h-7' />
 		</button>
 	);
 }

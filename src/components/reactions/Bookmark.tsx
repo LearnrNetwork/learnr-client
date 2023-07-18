@@ -11,11 +11,14 @@ export default function BookmarkButton({
 }) {
 	const [bookmarked, setBookmarked] = useState(isBookmarked);
 	return (
-		<button onClick={onClick ? onClick : () => setBookmarked(!bookmarked)}>
+		<button
+			title='Bookmark'
+			onClick={onClick ? onClick : () => setBookmarked(!bookmarked)}
+		>
 			<BookmarkIcon
 				className={classNames(
 					bookmarked ? 'fill-blue-600 text-blue-600' : 'text-gray-700',
-					'w-8 h-8'
+					'w-7 h-7'
 				)}
 			/>
 		</button>
