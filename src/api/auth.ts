@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from '@/utils/axios';
 
 interface LoginResponse {
 	status: string;
@@ -60,15 +60,9 @@ export const register = async (
 };
 
 // valid user
-export const currentUser = async (token: string) => {
-	const { data }: { data: LoginResponse | ErrorResponse } = await axios.post(
-		'http://localhost:8000/api/v1/auth/current-user',
-		{},
-		{
-			headers: {
-				Authorization: `Bearer ${token}`,
-			},
-		}
+export const currentUser = async (token: string | null) => {
+	const { data }: any = await axios.post(
+		'http://localhost:8000/api/v1/auth/current-user'
 	);
 	return data;
 };
