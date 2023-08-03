@@ -21,10 +21,9 @@ export default function LoginForm() {
 				localStorage.setItem('token', data.token);
 				setTimeout(() => router.push('/'), 1500);
 			})
-			.catch((err) => {
+			.catch((err: any) => {
 				const error = err.response.data;
 				toast.error(error.message);
-				console.log(error);
 			});
 	};
 
