@@ -122,49 +122,13 @@ export default function CoursesPage() {
 			{/* a list of courses */}
 			<div className='lg:w-3/4 md:w-full'>
 				{/* What people are reading */}
-				<div className='my-8'>
-					<h2 className='mb-4 text-2xl tracking-wide'>From Learnr</h2>
-					<div className='flex overflow-x-scroll md:justify-around lg:justify-start'>
-						{books.map((book: any) => (
-							<div key={book._id} className='flex mb-4 ml-4'>
-								<Course
-									title={book.title}
-									author={book.author}
-									cover={book.cover}
-									tags={book.tags}
-									href={book.href}
-								/>
-							</div>
-						))}
-					</div>
-				</div>
-				{/* Based on your interest */}
-				<div className=''>
-					<h2 className='mb-4 text-2xl tracking-wide'>
-						Based on your interest
+				<div>
+					<h2 className='mb-4 text-2xl font-medium tracking-wide'>
+						From Learnr
 					</h2>
-					<div className='flex overflow-x-scroll md:justify-around lg:justify-start'>
+					<div>
 						{books.map((book: any) => (
-							<div key={book._id} className='flex mb-4 ml-4'>
-								<Book
-									title={book.title}
-									author={book.author}
-									cover={book.cover}
-									tags={book.tags}
-									href={book.href}
-								/>
-							</div>
-						))}
-					</div>
-				</div>
-				{/* What people are reading */}
-				<div className='my-8'>
-					<h2 className='mb-4 text-2xl tracking-wide'>
-						What people are reading
-					</h2>
-					<div className='flex overflow-x-scroll md:justify-around lg:justify-start'>
-						{books.map((book: any) => (
-							<div key={book._id} className='flex mb-4 ml-4'>
+							<div key={book._id} className='w-full mb-4'>
 								<Course
 									title={book.title}
 									author={book.author}
