@@ -88,43 +88,54 @@ export default function MultiSelect({
 							leaveTo='opacity-0'
 						>
 							<Combobox.Options className='absolute z-10 w-full py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm'>
-								{filteredValue.map((value: any) => (
-									<Combobox.Option
-										key={value._id}
-										className={({ active }) =>
-											classNames(
-												active ? 'text-white bg-indigo-600' : 'text-gray-900 ',
-												'cursor-default select-none relative py-2 pl-3 pr-9'
-											)
-										}
-										value={value}
-										disabled={selected.includes(value)}
-									>
-										{({ selected, active }) => (
-											<>
-												<span
-													className={classNames(
-														selected ? 'font-semibold' : 'font-normal',
-														'block truncate'
-													)}
-												>
-													{value.name}
-												</span>
-
-												{selected ? (
+								{filteredValue.length > 0 ? (
+									filteredValue.map((value: any) => (
+										<Combobox.Option
+											key={value._id}
+											className={({ active }) =>
+												classNames(
+													'cursor-pointer select-none relative py-2 pl-3 pr-9',
+													active
+														? 'text-white bg-indigo-600'
+														: 'text-gray-900 cursor-not-allowed'
+												)
+											}
+											value={value}
+											disabled={selected.includes(value)}
+										>
+											{({ selected, active }) => (
+												<>
 													<span
 														className={classNames(
-															active ? 'text-white' : 'text-indigo-600',
-															'absolute inset-y-0 right-0 flex items-center pr-4'
+															selected ? 'font-semibold' : 'font-normal',
+															'block truncate'
 														)}
 													>
-														<CheckIcon className='w-5 h-5' aria-hidden='true' />
+														{value.name}
 													</span>
-												) : null}
-											</>
-										)}
-									</Combobox.Option>
-								))}
+
+													{selected ? (
+														<span
+															className={classNames(
+																active ? 'text-white' : 'text-indigo-600',
+																'absolute inset-y-0 right-0 flex items-center pr-4'
+															)}
+														>
+															<CheckIcon
+																className='w-5 h-5'
+																aria-hidden='true'
+															/>
+														</span>
+													) : null}
+												</>
+											)}
+										</Combobox.Option>
+									))
+								) : (
+									<span className='block px-4 py-2 text-sm text-gray-700'>
+										No tags found
+									</span>
+								)}
 							</Combobox.Options>
 						</Transition>
 					</div>
