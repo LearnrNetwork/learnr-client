@@ -6,11 +6,9 @@ export default function UserLayout({
 	children: React.ReactNode;
 }): JSX.Element {
 	return (
-		<main className='flex flex-col justify-center w-full'>
+		<main className='relative flex flex-col w-full h-full '>
 			<Navbar />
-			<div>
-				<div className='flex flex-col items-center w-full'>{children}</div>
-			</div>
+			<div className='flex flex-col items-center w-full h-full'>{children}</div>
 		</main>
 	);
 }
