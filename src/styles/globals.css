@@ -21,7 +21,7 @@
 }
 
 #book-content > h4 {
-  @apply pt-6 pb-2 text-xl font-semibold;
+  @apply pt-8 pb-2 text-xl font-semibold;
 }
 
 #book-content > blockquote {
