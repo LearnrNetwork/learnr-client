@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function NotFoundPage() {
 	return (
 		<UserLayout>
-			<div className='absolute top-0 left-0 flex items-center justify-center w-full h-full -z-10'>
+			<div className='absolute top-0 left-0 flex items-center justify-center w-full h-full'>
 				<div className='flex flex-col items-center justify-center h-full'>
 					<div>
 						<h3 className='font-semibold text-primary'>404</h3>
